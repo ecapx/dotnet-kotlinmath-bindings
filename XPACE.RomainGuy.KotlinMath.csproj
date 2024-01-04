@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-android</TargetFramework>
+    <SupportedOSPlatformVersion>24</SupportedOSPlatformVersion>
+    <Version>1.5.3</Version>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>XPACE.RomainGuy.KotlinMath</RootNamespace>
+    <EnablePackageValidation>true</EnablePackageValidation>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Authors>Marian Lambert</Authors>
+    <Description>.NET Bindings for KotlinMath library by Romainguy</Description>
+    <PackageTags>math, bindings, android, maui</PackageTags>
+    <PackageProjectUrl>https://github.com/ecapx/dotnet-kotlinmath-bindings/blob/main/README.md</PackageProjectUrl>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="kotlin-math.jar" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+  <!-- 
+  Conditionally include Additions.cs file.
+  This ItemGroup includes Additions.cs only when the 'NoAdditions' property is not set to true.
+  It allows for conditional compilation, enabling the exclusion of Additions.cs during certain build processes,
+  such as when generating binding code where Additions.cs might cause build issues due to missing dependencies.
+  -->
+  <ItemGroup Condition="'$(NoAdditions)'=='true'">
+    <Compile Remove="Additions/Additions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DotNet.ReproducibleBuilds" Version="1.1.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Kotlin.StdLib" Version="1.9.21.1" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,10 @@
+﻿<metadata>
+    <attr path="/api/package[@name='dev.romainguy.kotlin.math']" name="managedName">Romainguy.Kotlin.Math</attr>
+    <attr path="/api/package[@name='dev.romainguy.kotlin.math']/class[@name='Half.Companion']" name="managedName">HalfCompanion</attr>
+    <attr path="/api/package[@name='dev.romainguy.kotlin.math']/class[@name='Mat2.Companion']" name="managedName">Mat2Companion</attr>
+    <attr path="/api/package[@name='dev.romainguy.kotlin.math']/class[@name='Mat3.Companion']" name="managedName">Mat3Companion</attr>
+    <attr path="/api/package[@name='dev.romainguy.kotlin.math']/class[@name='Mat4.Companion']" name="managedName">Mat4Companion</attr>
+    <attr path="/api/package[@name='dev.romainguy.kotlin.math']/class[@name='Quaternion.Companion']" name="managedName">QuaternionCompanion</attr>
+    <attr path="/api/package[@name='dev.romainguy.kotlin.math']/class[@name='Rational.Companion']" name="managedName">RationalCompanion</attr>
+	
+</metadata>
