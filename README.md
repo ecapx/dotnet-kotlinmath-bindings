@@ -14,13 +14,6 @@ dotnet add package XPACE.RomainGuy.KotlinMath
 
 ## Usage
 
-```csharp
-using Google.AR.Core;
-// ...
-var session = new Session(Platform.AppContext);
-// ...
-```
-
 Please check the original [GitHub repository](https://github.com/romainguy/kotlin-math) for more information.
 
 ## Contributing
